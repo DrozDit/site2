@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tracks — Last.fm Музыка</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">Tracks</h1>
+      <div class="auth-buttons">
+        <button id="loginBtn" class="btn auth-btn">Войти</button>
+        <button id="registerBtn" class="btn auth-btn">Регистрация</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="add-button-container">
+        <button id="addTrackBtn" class="add-btn">➕</button>
+      </div>
+
+      <div class="results" id="results">
+        <p class="empty">Добавить карточку</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay" style="display:none;">
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+
+  <div class="modal-overlay" id="addModal" style="display:none;">
+    <div class="modal-box auth-modal">
+      <span class="close-btn" onclick="closeAddModal()">&times;</span>
+      <h2>Добавить музыку</h2>
+      <form id="addForm">
+        <div class="form-group">
+          <label for="addQuery">Исполнитель — Название</label>
+          <input type="text" id="addQuery" placeholder="Nirvana — Nevermind" required />
+        </div>
+        <div class="form-group">
+          <label for="addType">Тип</label>
+          <select id="addType" class="form-select">
+            <option value="album">Альбом</option>
+            <option value="track">Трек</option>
+          </select>
+        </div>
+        <p id="addError" class="error" style="display:none;"></p>
+        <button type="submit" class="btn primary">Добавить</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modal-overlay" id="loginModal" style="display:none;">
+    <div class="modal-box auth-modal">
+      <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+      <h2>Вход</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginUsername">Логин</label>
+          <input type="text" id="loginUsername" required />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Пароль</label>
+          <input type="password" id="loginPassword" required />
+        </div>
+        <p id="loginError" class="error" style="display:none;"></p>
+        <button type="submit" class="btn primary">Войти</button>
+      </form>
+      <p style="margin-top: 15px;">
+        Нет аккаунта? <a href="#" onclick="openRegisterModal(); return false;">Зарегистрироваться</a>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="modal-overlay" id="registerModal" style="display:none;">
+    <div class="modal-box auth-modal">
+      <span class="close-btn" onclick="closeRegisterModal()">&times;</span>
+      <h2>Регистрация</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="regUsername">Логин</label>
+          <input type="text" id="regUsername" required />
+        </div>
+        <div class="form-group">
+          <label for="regPassword">Пароль</label>
+          <input type="password" id="regPassword" required />
+        </div>
+        <div class="form-group">
+          <label for="regPassword2">Повторите пароль</label>
+          <input type="password" id="regPassword2" required />
+        </div>
+        <p id="registerError" class="error" style="display:none;"></p>
+        <button type="submit" class="btn primary">Зарегистрироваться</button>
+      </form>
+      <p style="margin-top: 15px;">
+        Уже есть аккаунт? <a href="#" onclick="openLoginModal(); return false;">Войти</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
