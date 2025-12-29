@@ -1,28 +1,24 @@
-/* Цветовая палитра и темы */
 :root {
-  /* Фон и панели */
+  
   --bg-gradient-start: #1a0026;
   --bg-gradient-end: #2d004d;
   --bg-panel: #1e1333;
   --bg-panel-hover: #2a1e4a;
   --border: #3a2d5a;
   
-  /* Цвета текста */
   --text-primary: #e0e0ff;
   --text-secondary: #b39ddb;
   --text-muted: #7a6daa;
   
-  /* Акценты */
   --primary: #9c27b0;        /* Фиолетовый */
   --primary-hover: #7b1fa2;
   --delete-btn: #c51162;     /* Розово-фиолетовый */
   --delete-btn-hover: #ad1457;
   
-  /* Состояния */
   --error: #f44336;
   --success: #4caf50;
   
-  /* Тени и эффекты */
   --shadow-light: rgba(0, 0, 0, 0.3);
   --shadow-dark: rgba(0, 0, 0, 0.5);
+
 }
