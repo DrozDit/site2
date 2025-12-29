@@ -10,9 +10,9 @@
   --text-secondary: #b39ddb;
   --text-muted: #7a6daa;
   
-  --primary: #9c27b0;        /* Фиолетовый */
+  --primary: #9c27b0;       
   --primary-hover: #7b1fa2;
-  --delete-btn: #c51162;     /* Розово-фиолетовый */
+  --delete-btn: #c51162;     
   --delete-btn-hover: #ad1457;
   
   --error: #f44336;
@@ -22,3 +22,4 @@
   --shadow-dark: rgba(0, 0, 0, 0.5);
 
 }
+
